@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20160123160853) do
 
   create_table "classrooms", force: true do |t|
-    t.integer  "courses_id"
-    t.integer  "students_id"
+    t.integer  "course_id"
+    t.integer  "student_id"
     t.datetime "entry_at"
   end
 
-  add_index "classrooms", ["courses_id"], name: "index_classrooms_on_courses_id"
-  add_index "classrooms", ["students_id"], name: "index_classrooms_on_students_id"
+  add_index "classrooms", ["course_id"], name: "index_classrooms_on_course_id"
+  add_index "classrooms", ["student_id"], name: "index_classrooms_on_student_id"
 
   create_table "courses", force: true do |t|
     t.string  "name"

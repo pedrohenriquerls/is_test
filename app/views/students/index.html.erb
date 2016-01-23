@@ -8,6 +8,7 @@
     <th>nome</th>
     <th>Matricula</th>
     <th>Status</th>
+    <th>Cursos</th>
     <th></th>
   </tr>
   </thead>
@@ -17,7 +18,8 @@
       <tr>
         <td><%= student.name %></td>
         <td><%= student.register_number %></td>
-        <td><%= student.status %></td>
+        <td><%= Student::STATUS[student.status] %></td>
+        <td><%= student.courses.collect{|c| c.name}.join(',')%></td>
         <td>
           <div class="btn-group">
             <button class="btn"><%= link_to 'Editar', edit_student_path(student) %></button>

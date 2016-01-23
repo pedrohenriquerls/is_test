@@ -1,6 +1,6 @@
 class Classroom < ActiveRecord::Base
-  belongs_to :students, dependent: :destroy
-  belongs_to :courses, dependent: :destroy
+  belongs_to :student, dependent: :destroy
+  belongs_to :course, dependent: :destroy
 
   before_save :define_entry_at
 

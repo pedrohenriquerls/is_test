@@ -15,6 +15,8 @@ IsTest::Application.routes.draw do
   #   resources :products
   resources :students
   resources :courses
+  get 'classrooms' => 'classroom#index'
+  post 'classroom/create' => 'classroom#create'
 
   # Example resource route with options:
   #   resources :products do

@@ -11,8 +11,8 @@ class Database < ActiveRecord::Migration
     end
 
     create_table :classrooms do |c|
-      c.belongs_to :courses, index: true
-      c.belongs_to :students, index: true
+      c.belongs_to :course, index: true
+      c.belongs_to :student, index: true
       c.datetime :entry_at
     end
   end

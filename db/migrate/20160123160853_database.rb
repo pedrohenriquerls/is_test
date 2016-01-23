@@ -1,11 +1,13 @@
 class Database < ActiveRecord::Migration
   def change
     create_table :students do |s|
-      s.string :name, :register_number, :status
+      s.string :name, :register_number
+      s.integer :status
     end
 
     create_table :courses do |c|
-      c.string :name, :description, :status
+      c.string :name, :description
+      c.integer :status
     end
 
     create_table :classrooms do |c|

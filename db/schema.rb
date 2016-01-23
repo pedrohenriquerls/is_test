@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20160123160853) do
   add_index "classrooms", ["students_id"], name: "index_classrooms_on_students_id"
 
   create_table "courses", force: true do |t|
-    t.string "name"
-    t.string "description"
-    t.string "status"
+    t.string  "name"
+    t.string  "description"
+    t.integer "status"
   end
 
   create_table "students", force: true do |t|
-    t.string "name"
-    t.string "register_number"
-    t.string "status"
+    t.string  "name"
+    t.string  "register_number"
+    t.integer "status"
   end
 
 end

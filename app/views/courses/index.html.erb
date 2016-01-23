@@ -1,0 +1,30 @@
+<h1>Cursos</h1>
+
+<%= link_to 'Novo Curso', new_course_path, class: 'btn btn-info' %>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>nome</th>
+    <th>Descrição</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.name %></td>
+        <td><%= course.description %></td>
+        <td><%= course.status %></td>
+        <td>
+          <div class="btn-group">
+            <button class="btn"><%= link_to 'Editar', edit_course_path(course) %></button>
+            <button class="btn"><%= link_to 'Apagar', course, method: :delete, data: { confirm: 'Quer realmente apagar?' } %></button>
+          </div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
